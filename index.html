@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" id="city-input">
+            <button onclick="getWeather()">Search</button>
+            <button onclick="getUserLocation()" class="location-btn">
+                <i class="fas fa-location-arrow"></i>
+            </button>
+        </div>
+        <div class="weather-box">
+            <div class="weather-info">
+                <h2 id="city-name">--</h2>
+                <div class="temperature">
+                    <span id="temp">--</span>°C
+                </div>
+                <div class="weather-description" id="weather-desc">--</div>
+                <div class="weather-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <div class="details">
+                    <div class="humidity">
+                        <i class="fas fa-tint"></i>
+                        <span>Humidity</span>
+                        <span id="humidity">--%</span>
+                    </div>
+                    <div class="wind">
+                        <i class="fas fa-wind"></i>
+                        <span>Wind Speed</span>
+                        <span id="wind-speed">-- km/h</span>
+                    </div>
+                    <div class="clouds">
+                        <i class="fas fa-cloud"></i>
+                        <span>Cloud Coverage</span>
+                        <span id="clouds">--%</span>
+                    </div>
+                </div>
+                <div class="air-quality">
+                    <h3>Air Quality Index (AQI)</h3>
+                    <div class="aqi-details">
+                        <div class="aqi-value">
+                            <span>AQI</span>
+                            <span id="aqi">--</span>
+                        </div>
+                        <div class="aqi-components">
+                            <div class="component">
+                                <i class="fas fa-smog"></i>
+                                <span>PM2.5</span>
+                                <span id="pm25">--</span>
+                            </div>
+                            <div class="component">
+                                <i class="fas fa-wind"></i>
+                                <span>PM10</span>
+                                <span id="pm10">--</span>
+                            </div>
+                            <div class="component">
+                                <i class="fas fa-cloud-sun"></i>
+                                <span>O₃</span>
+                                <span id="o3">--</span>
+                            </div>
+                            <div class="component">
+                                <i class="fas fa-industry"></i>
+                                <span>NO₂</span>
+                                <span id="no2">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weather-visualization">
+            <div class="weather-animation-container">
+                <div class="sun"></div>
+                <div class="clouds"></div>
+                <div class="rain"></div>
+                <div class="snow"></div>
+                <div class="thunder"></div>
+                <div class="fog"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
